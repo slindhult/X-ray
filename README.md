@@ -155,3 +155,4 @@ Below are the results of the model on Effusion, the build up of fluid in the tis
 ### Next Steps:
 * Introduce a cutoff point for each pathology based on the model to create a more appropriate screening buffer and drive recall closer to 100%.
 * Further training of the models on larger images to see if diagnosis improves as the images were significantly reduced in size for to reduce training time.
+* Utilize transfer learning from other existing image classifiers and apply them to this problem.
