@@ -3,16 +3,26 @@
 <p float="left">
   <img src='https://www.alfredhealth.org.au/images/made/contents/general/Stock-images-owned/Xray-banner_1200_400.jpg'  />
 </p>
-# Table of Contents
-1. [Introduction](https://github.com/slindhult/X-ray#Why-Chest-X-rays)
-2. [Models](#example2)
-3. [Third Example](#third-example)
-4. [Further Considerations](#fourth-examplehttpwwwfourthexamplecom)
 
 ### Why Chest X-rays
 Chest X-rays are one of the most common and cost effective medical imaging examinations available for chest ailments, however clinical diagnosis of a chest x-ray can be challenging and sometimes more difficult than diagnosis via CT, which may not be available at rural medical centers. 
 
 With computer aided diagnostics provided through predictive models using convolutional neural networks.  Health care facilities could provide better predictions by providing busy doctors with suggested pathologies to look into with their associated probabilities.  More accurate diagnosis could lead to better care especially if no other diagnostic equipment is available.
+
+### Table of Contents
+<ul>
+<li><a href="https://github.com/slindhult/X-ray#The-Dataset">Data Exploration</a></li>
+<li><a href="https://github.com/slindhult/X-ray#The-Dataset">Hike Description Language Processing</a></li>
+<li><a href="https://github.com/slindhult/X-ray#The-Dataset">Models</a>
+<ul>
+<li><a href="https://github.com/slindhult/X-ray#Convolutional-Neural-Networks">Convolutional Neural Networksl</a></li>
+<li><a href="https://github.com/slindhult/X-ray#Model-Architecture">Simplified Models</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/slindhult/X-ray#Next-Steps">Next Steps</a></li>
+</ul>
+
+
 
 ### The Dataset
 The dataset was pulled from [Kaggle](https://www.kaggle.com/nih-chest-xrays/data) and provided by the National Institute for Health and contained 112k chest X-ray images with disease labels of 14 potential pathologies or ‘No Finding’.  It also included a csv file containing the associated patient age, gender,view of the image, patient number and followup appointment number. 
@@ -32,12 +42,16 @@ The dataset was evenly distributed between male and female across age range, pat
   <img src="https://github.com/slindhult/X-ray/blob/master/figures/mfdistribution.png?raw=true" width="400" /> 
 </p>
 
-#### Initial Model
+#### Convolutional Neural Networks
 Results: 
 * 65%  using Top 3 accuracy
 * 45% with a custom accuracy score incorporating a penalty component.
 The penalty component was implemented because not diagnosing the patient with something they do have is a major problem in health care and would lead to a delay in care.  
-![Custom Scoring](https://github.com/slindhult/X-ray/blob/master/figures/custom_scoring.png?raw=true)
+
+<p float="center">
+<img src="https://github.com/slindhult/X-ray/blob/master/figures/custom_scoring.png?raw=true" />
+</p>
+
 
 #### Simplifying the problem
 Diagnosis using the full dataset was a very difficult problem as it would be a 15 class multi-classification problem with a range of  output sizes.  To have more success a pivot was necessary to break the problem down into smaller pieces.
@@ -58,8 +72,6 @@ Below are the results of the model on Atelectasis, the partial collapse of the l
 <p float="left">
   <img src="https://github.com/slindhult/X-ray/blob/master/figures/Atelectasis_confusion.png?raw=true" width="400" />
   <img src="https://github.com/slindhult/X-ray/blob/master/figures/atelectasis_example.png?raw=true2" width="400" /> 
-72
-
 </p>
 
 ##### Effusion
@@ -71,6 +83,6 @@ Below are the results of the model on Effusion, the build up of fluid in the tis
 </p>
 
 
-### Future Considerations:
+### Next Steps:
 * Introduce a cutoff point for each pathology based on the model to create a more appropriate screening buffer and drive recall to near 100%.
 * Further training of the models on larger images to see if diagnosis improves as the images were significantly reduced in size for to reduce training time.
