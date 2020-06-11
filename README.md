@@ -12,7 +12,7 @@ With computer aided diagnostics provided through predictive models using convolu
 ### Table of Contents
 <ul>
 <li><a href="https://github.com/slindhult/X-ray#The-Dataset">Data Exploration</a></li>
-<li><a href="https://github.com/slindhult/X-ray#The-Dataset">Hike Description Language Processing</a></li>
+<li><a href="https://github.com/slindhult/X-ray#Sickest-Patients">Sickest Patients</li>
 <li><a href="https://github.com/slindhult/X-ray#The-Dataset">Models</a>
 <ul>
 <li><a href="https://github.com/slindhult/X-ray#Convolutional-Neural-Networks">Convolutional Neural Networksl</a></li>
@@ -37,9 +37,17 @@ Over 800 different combinations for the diagnosis
 
 
 The dataset was evenly distributed between male and female across age range, pathology, and the view the image was taken from Anterior-Posterior (AP) or Posterior-Anterion(PA).  Since it is evenly distributed a model trained on the entire dataset should generalize well.
-<p float="left">
+<p align="center">
   <img src="https://github.com/slindhult/X-ray/blob/master/figures/agegender.png?raw=true" width="400" />
   <img src="https://github.com/slindhult/X-ray/blob/master/figures/mfdistribution.png?raw=true" width="400" /> 
+</p>
+
+#### Sickest Patients
+Below are three of the sickest patients so you can see what the model was up against.  It would be difficult for trained medical professionals to predict all of the pathologies given only the X-ray image.
+<p align="center">
+  <img src="https://github.com/slindhult/X-ray/blob/master/figures/sickest_left.png?raw=true" width="250" />
+  <img src="https://github.com/slindhult/X-ray/blob/master/figures/sickest_center.png?raw=true" width="250" />
+  <img src="https://github.com/slindhult/X-ray/blob/master/figures/sickest_right.png?raw=true" width="250" /> 
 </p>
 
 #### Convolutional Neural Networks
@@ -48,8 +56,8 @@ Results:
 * 45% with a custom accuracy score incorporating a penalty component.
 The penalty component was implemented because not diagnosing the patient with something they do have is a major problem in health care and would lead to a delay in care.  
 
-<p float="center">
-<img src="https://github.com/slindhult/X-ray/blob/master/figures/custom_scoring.png?raw=true" />
+<p align="center">
+  <img src="https://github.com/slindhult/X-ray/blob/master/figures/custom_scoring.png?raw=true">
 </p>
 
 
@@ -69,7 +77,7 @@ The simplified models compared individual findings against the no finding catego
 ##### Atelectasis
 Below are the results of the model on Atelectasis, the partial collapse of the lung where the alveoli fill with alveolar fluid.  The accuracy was 81.6%, but important metric is the specificity(recall) which was 88.8%.  Specificity is the important metric because a prediction of healthy when someone is unhealth would be a major issue, it's better err on the side of caution and maximize recall over precision or accuracy. 
 
-<p float="left">
+<p align="center">
   <img src="https://github.com/slindhult/X-ray/blob/master/figures/Atelectasis_confusion.png?raw=true" width="400" />
   <img src="https://github.com/slindhult/X-ray/blob/master/figures/atelectasis_example.png?raw=true2" width="400" /> 
 </p>
@@ -77,12 +85,12 @@ Below are the results of the model on Atelectasis, the partial collapse of the l
 ##### Effusion
 Below are the results of the model on Effusion, the build up of fluid in the tissue aroudn the lung collapse of the lung. The accuracy was 81.6%, but important metric is the specificity(recall) which was 71.59%. Specificity is the important metric because a prediction of healthy when someone is unhealth would be a major issue, it's better err on the side of caution and maximize recall over precision or accuracy.
 
-<p float="left">
+<p align="center">
   <img src="https://github.com/slindhult/X-ray/blob/master/figures/effusion_confusion.png?raw=true" width="400" />
   <img src="https://github.com/slindhult/X-ray/blob/master/figures/effusion_example.png?raw=true" width="400" /> 
 </p>
 
 
 ### Next Steps:
-* Introduce a cutoff point for each pathology based on the model to create a more appropriate screening buffer and drive recall to near 100%.
+* Introduce a cutoff point for each pathology based on the model to create a more appropriate screening buffer and drive recall closer to 100%.
 * Further training of the models on larger images to see if diagnosis improves as the images were significantly reduced in size for to reduce training time.
