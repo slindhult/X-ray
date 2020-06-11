@@ -3,6 +3,11 @@
 <p float="left">
   <img src='https://www.alfredhealth.org.au/images/made/contents/general/Stock-images-owned/Xray-banner_1200_400.jpg'  />
 </p>
+# Table of Contents
+1. [Introduction](https://github.com/slindhult/X-ray#Why-Chest-X-rays)
+2. [Models](#example2)
+3. [Third Example](#third-example)
+4. [Further Considerations](#fourth-examplehttpwwwfourthexamplecom)
 
 ### Why Chest X-rays
 Chest X-rays are one of the most common and cost effective medical imaging examinations available for chest ailments, however clinical diagnosis of a chest x-ray can be challenging and sometimes more difficult than diagnosis via CT, which may not be available at rural medical centers. 
@@ -21,7 +26,7 @@ Over 800 different combinations for the diagnosis
 ![Top 16](https://github.com/slindhult/X-ray/blob/master/figures/diagnoses_master.jpg?raw=true)
 
 
-The dataset was evenly distributed between male and female across age range, pathology, and the view the image was taken from Anterior-Posterior (AP) or Posterior-Anterion(PA).
+The dataset was evenly distributed between male and female across age range, pathology, and the view the image was taken from Anterior-Posterior (AP) or Posterior-Anterion(PA).  Since it is evenly distributed a model trained on the entire dataset should generalize well.
 <p float="left">
   <img src="https://github.com/slindhult/X-ray/blob/master/figures/agegender.png?raw=true" width="400" />
   <img src="https://github.com/slindhult/X-ray/blob/master/figures/mfdistribution.png?raw=true" width="400" /> 
