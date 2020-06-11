@@ -50,6 +50,65 @@ Below are three of the sickest patients so you can see what the model was up aga
   <img src="https://github.com/slindhult/X-ray/blob/master/figures/sickest_right.png?raw=true" width="250" /> 
 </p>
 
+<div style="text-align:center;">
+<table>
+<thead>
+<tr>
+<th>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp; &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp; Patient 1 &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp; &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;</th>
+<th>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp; &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp; Patient 2 &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp; &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;</th>
+<th>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;  &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Patient 3 &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp; &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp; &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Atelectasis</td>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Atelectasis</td>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Atelectasis</td>
+</tr>
+<tr>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Cardiomegaly</td>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Consolidation</td>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Consolidation</td>
+</tr>
+<tr>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Consolidation</td>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Effusion</td>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Edema</td>
+</tr>
+<tr>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Effusion</td>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Fibrosis</td>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Effusion</td>
+</tr>
+<tr>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Infiltration</td>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Infiltration</td>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Infiltration</td>
+</tr>
+<tr>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Mass</td>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Mass</td>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Mass</td>
+</tr>
+<tr>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Nodule</td>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Nodule</td>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Nodule</td>
+</tr>
+<tr>
+<td></td>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Pleural Thickening</td>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Pleural Thickening</td>
+</tr>
+<tr>
+<td></td>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Pneumothorax</td>
+<td>&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;Pneumonia</td>
+</tr>
+</tbody>
+</table>
+</div>
+
 #### Convolutional Neural Networks
 Results: 
 * 65%  using Top 3 accuracy
@@ -57,7 +116,7 @@ Results:
 The penalty component was implemented because not diagnosing the patient with something they do have is a major problem in health care and would lead to a delay in care.  
 
 <p align="center">
-  <img src="https://github.com/slindhult/X-ray/blob/master/figures/custom_scoring.png?raw=true">
+  <img src="https://github.com/slindhult/X-ray/blob/master/figures/custom_scoring.png?raw=true"/>
 </p>
 
 
@@ -69,7 +128,9 @@ The problem was broken down into smaller individual diagnosis models that were b
 #### Model Architecture
 The model used four conv2D layers with a Relu activation function to loop through the pixels and extract features.  The model also utilized four maxpooling layers with filter size 2x2 which looped through the pixels and selected the maximium value in the filter, leading to a reduced image size after each layer.  
 
-!Model Architecture](https://github.com/slindhult/X-ray/blob/master/figures/model_architecture.png?raw=true)
+<p align="center">
+  <img src="https://github.com/slindhult/X-ray/blob/master/figures/model_architecture.png?raw=true" />
+</p>
 
 #### Simplified Models
 The simplified models compared individual findings against the no finding category.  This required creating new datasets for each pathology combined with the no finding data and balancing it, since the classes would be very imbalanced.
