@@ -15,7 +15,7 @@ With computer aided diagnostics provided through predictive models using convolu
 <li><a href="https://github.com/slindhult/X-ray#Sickest-Patients">Sickest Patients</li>
 <li><a href="https://github.com/slindhult/X-ray#The-Dataset">Models</a>
 <ul>
-<li><a href="https://github.com/slindhult/X-ray#Convolutional-Neural-Networks">Convolutional Neural Networksl</a></li>
+<li><a href="https://github.com/slindhult/X-ray#Convolutional-Neural-Networks">Convolutional Neural Networks</a></li>
 <li><a href="https://github.com/slindhult/X-ray#Model-Architecture">Simplified Models</a></li>
 </ul>
 </li>
@@ -38,8 +38,10 @@ Over 800 different combinations for the diagnosis
 
 The dataset was evenly distributed between male and female across age range, pathology, and the view the image was taken from Anterior-Posterior (AP) or Posterior-Anterion(PA).  Since it is evenly distributed a model trained on the entire dataset should generalize well.
 <p align="center">
-  <img src="https://github.com/slindhult/X-ray/blob/master/figures/agegender.png?raw=true" width="400" />
-  <img src="https://github.com/slindhult/X-ray/blob/master/figures/mfdistribution.png?raw=true" width="400" /> 
+  <img src="https://github.com/slindhult/X-ray/blob/master/figures/agegender.png?raw=true" />
+</p>
+<p align="center">
+  <img src="https://github.com/slindhult/X-ray/blob/master/figures/mfdistribution.png?raw=true"  /> 
 </p>
 
 #### Sickest Patients
