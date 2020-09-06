@@ -1,20 +1,7 @@
-
-ssh -i "capstone.pem" ubuntu@ec2-52-53-152-153.us-west-1.compute.amazonaws.com
-
-yes
-
-python
-
 import pandas as pd
 import boto3.docs.attr
 import numpy as np
 from itertools import chain
-
-
-
-#s3 = boto3.resource('s3', region_name='us-west-1')
-#bucket = s3.Bucket('galvanize-capstone')
-
 
 #Clean Data
 
